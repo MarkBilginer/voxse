@@ -1,0 +1,19 @@
+# IDE & venv
+.idea/
+cpp/.idea/
+.vscode/
+.pytest_cache/
+__pycache__/
+*.pyc
+py/.venv/
+env/
+.venv/
+
+# builds
+cpp/build/
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
