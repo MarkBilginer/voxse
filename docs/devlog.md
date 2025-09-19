@@ -1,0 +1,1 @@
+- [x] Intro + OpenGL Window: created GL 3.3 core context, event loop, FPS caption.
