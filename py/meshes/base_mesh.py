@@ -18,7 +18,7 @@ class BaseMesh:
         vertex_data = self.get_vertex_data()
         vbo = self.ctx.buffer(vertex_data)
         vao = self.ctx.vertex_array(
-            self.shader_program, [(vbo, self.vbo_format, *self.attrs)], skip_errors=True
+            self.shader_program, [(vbo, self.vbo_format, *self.attrs)], skip_errors=False
         )
         return vao
 
