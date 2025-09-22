@@ -27,5 +27,7 @@ class Chunk:
             for z in range(CHUNK_SIZE):
                 for y in range(CHUNK_SIZE):
                     # we give here all voxels a value of 1
-                    voxels[x + CHUNK_SIZE * z + CHUNK_AREA * y] = x + y + z
+                    voxels[x + CHUNK_SIZE * z + CHUNK_AREA * y] = (
+                            x + y + z if int(glm.simplex(glm.vec3(x, y, z) * 0.1) + 1) else 0
+                    )
         return voxels
