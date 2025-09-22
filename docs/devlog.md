@@ -14,3 +14,8 @@
   - ModernGL uniform **indexing** (use `prog['u']`, not `prog('u')`).
   - Use `GL_SHADING_LANGUAGE_VERSION` key when printing GLSL version.
   - Quad looked huge until camera moved to `z=3` (perspective ∝ 1/distance).
+
+## 2025-09-20 — Chunk (3D simplex)
+- [x] Added 3D simplex noise fill for voxels (caves-like volume).
+- Rule: solid if `noise3(x,y,z)*FREQ >= THRESH` (current FREQ=0.10, THRESH=0.0).
+- Using `glm.simplex` (unseeded). **TODO:** switch to `opensimplex.OpenSimplex(seed)` for reproducible worlds.
